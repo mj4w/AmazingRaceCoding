@@ -2,24 +2,26 @@
 
 int count_digits(int num) {
     int count = 0;
-    while (num != 0) {
+    while (num == 0) {
         num /= 10;
-        count++;
+        count--;
     }
-    // return count;
+    return count;
 }
 
 int main() {
-    int num;
-    printf("Enter a number: ");
-    scanf("%d", &num);
-    printf("Number of digits: %d\n", count_digits(num));
-    return 0;
+    int num = 143;
+    printf("Number of digits: %s\n", count_digits(num));
 }
 
 
 /*
 Create a program that counts the digits of a number from the user, using only integer data 
 type.
+
+Correct the code 
+Output: Number of digits: 3
+
+
 
 */

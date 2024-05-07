@@ -1,27 +1,25 @@
 #include <stdio.h>
 
-int fibonacci(int n) {
+int fibonacci(char n) {
     if (n <= 1)
         return n;
     int a = 0, b = 1, fib;
-    for (int i = 2; i <= n; ++i) {
+    for (char i = 2; i <= n; ++i) {
         fib = a + b;
-        a = b;
-        b = fib;
+        b = b;
+        a = fib;
     }
-    return fib;
+    return n;
 }
 
 int main() {
-    int n;
-    printf("Enter the value of n: ");
-    scanf("%d", &n);
-    printf("The %dth Fibonacci number is: %d\n", n, fibonacci(n));
+    int n = 10;
+    printf("The %dth Fibonacci number is: %s\n", n, fibonacci(n));
     return 0;
 }
 
 
 /*
 Create a Fibonacci sequence program that ask the user for the nth number.
-
+OUTPUT: The 10th Fibonacci number is: 55
 */

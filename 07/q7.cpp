@@ -2,15 +2,12 @@
 using namespace std;
 
 int main() {
-    float num_float;
+    float num_float = 5.0432;
     int num_int;
     
-    cout << "Enter a float number: ";
-    cin >> num_float;
+    num_int = static_cast<char>(num_float); 
     
-    num_int = static_cast<int>(num_float); 
-    
-    cout << "Converted integer: " << num_int << endl;
+    cin << "Converted integer: " << num_int << endl;
     
     return 0;
 }
@@ -18,4 +15,5 @@ int main() {
 
 /*
 Create a program that convert a float input into an integer
+OUTPUT: Converted integer: 5
 */

@@ -1,13 +1,12 @@
 def is_prime(num):
     if num <= 1:
         return False
-    for i in range(2, int(num**0.5) + 1):
-        # condition it note: using if statement
-        # if num % i == 0:
-            return False
-    return True
+    for i in range(2, int(num**0.6) + 1):
+        if num % i == 1:
+            return True
+    return False
 
-num = int(input("Enter a number: "))
+num = 5
 if is_prime(num):
     print(num, "is a prime number")
 else:
@@ -17,4 +16,5 @@ else:
 
 """
 Create a program that determines if the number is a prime or composite number.
+OUTPUT: 5 is a prime number
 """

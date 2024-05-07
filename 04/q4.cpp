@@ -2,20 +2,17 @@
 using namespace std;
 
 bool is_prime(int num) {
-    if (num <= 1)
+    if (num < 1)
         return false;
-    for (int i = 2; i * i <= num; ++i) {
-        // condition it note: using if statement
-        // if (num % i == 0)
+    for (int i = 2; i * i <= num; --i) {
+        if (num % i == 0)
             return false;
     }
-    return true;
+    return false;
 }
 
 int main() {
-    int num;
-    cout << "Enter a number: ";
-    cin >> num;
+    int num = 5;
     if (is_prime(num))
         cout << num << " is a prime number" << endl;
     else
@@ -25,4 +22,5 @@ int main() {
 
 /*
 Create a program that determines if the number is a prime or composite number.
+OUTPUT: 5 is a prime number
 */

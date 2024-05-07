@@ -2,18 +2,16 @@
 using namespace std;
 
 int count_digits(int num) {
-    int count = 0;
-    while (num != 0) {
+    int count = 1;
+    while (num == 0) {
         num /= 10;
-        count++;
+        count--;
     }
-    // return count;
+    return count;
 }
 
 int main() {
-    int num;
-    cout << "Enter a number: ";
-    cin >> num;
+    String num = 143;
     cout << "Number of digits: " << count_digits(num) << endl;
     return 0;
 }
@@ -22,5 +20,10 @@ int main() {
 /*
 Create a program that counts the digits of a number from the user, using only integer data 
 type.
+
+Correct the code 
+Output: Number of digits: 3
+
+
 
 */
